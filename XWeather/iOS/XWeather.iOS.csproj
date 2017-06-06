@@ -36,11 +36,13 @@
         </Command>
       </CustomCommands>
     </CustomCommands>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType></DebugType>
+    <DebugType>
+    </DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
     <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
@@ -54,7 +56,8 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <CustomCommands>
       <CustomCommands>
         <Command>
@@ -63,11 +66,12 @@
         </Command>
       </CustomCommands>
     </CustomCommands>
-<MtouchUseLlvm>true</MtouchUseLlvm>
-<MtouchDebug>false</MtouchDebug>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchDebug>false</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType></DebugType>
+    <DebugType>
+    </DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
@@ -108,7 +112,8 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <CustomCommands>
       <CustomCommands>
         <Command>
@@ -119,7 +124,39 @@
     </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calabash, Version=20.6.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.6\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Analytics.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Crashes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Crashes.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Distribute, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Distribute.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Distribute.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Distribute.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Distribute.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Distribute.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.0.12.0\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -136,12 +173,6 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Calabash">
-      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.3\lib\Xamarin.iOS10\Calabash.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.Interfaces">
       <HintPath>..\packages\ServiceStack.Interfaces.4.5.8\lib\portable-wp80+sl5+net45+win8+wpa81+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
@@ -156,30 +187,6 @@
     </Reference>
     <Reference Include="ServiceStack.HttpClient">
       <HintPath>..\packages\ServiceStack.HttpClient.4.5.8\lib\portable-net45+win8+monotouch+monoandroid+xamarin.ios10\ServiceStack.HttpClient.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Analytics">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Analytics.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Crashes">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Crashes.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Distribute">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Distribute.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Distribute.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Distribute.iOS.Bindings">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Distribute.0.8.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Distribute.iOS.Bindings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -498,46 +505,60 @@
     <ImageAsset Include="Assets.xcassets\i_add_sm.imageset\i_add_sm.pdf">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\logo_wunderground_rev.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo_wunderground_rev.imageset\logo_wunderground_rev.pdf" />
-    <ImageAsset Include="Assets.xcassets\logo_wunderground_white.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo_wunderground_white.imageset\logo_wunderground_white.pdf" />
-    <ImageAsset Include="Assets.xcassets\bg_launch.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\bg_launch.imageset\bg_launch.pdf" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\i_radar.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\i_radar.imageset\i_radar.pdf" />
-    <ImageAsset Include="Assets.xcassets\i_current.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\i_current.imageset\i_current.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo_wunderground_rev.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_wunderground_rev.imageset\logo_wunderground_rev.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_wunderground_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo_wunderground_white.imageset\logo_wunderground_white.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bg_launch.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\bg_launch.imageset\bg_launch.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\i_radar.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\i_radar.imageset\i_radar.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\i_current.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\i_current.imageset\i_current.pdf">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="ViewControllers\" />
-    <Folder Include="ViewControllers\TableViewControllers\" />
-    <Folder Include="ViewControllers\TableViewControllers\TableViewCells\" />
-    <Folder Include="ViewControllers\TableViewControllers\TableViewHeaders\" />
     <Folder Include="Assets.xcassets\Atlanta.dataset\" />
-    <Folder Include="Assets.xcassets\Miami.dataset\" />
-    <Folder Include="Assets.xcassets\New_Orleans.dataset\" />
-    <Folder Include="Assets.xcassets\Denver.dataset\" />
-    <Folder Include="Assets.xcassets\Las_Vegas.dataset\" />
-    <Folder Include="Assets.xcassets\San_Francisco.dataset\" />
-    <Folder Include="Providers\" />
-    <Folder Include="Extensions\" />
+    <Folder Include="Assets.xcassets\bg_launch.imageset\" />
     <Folder Include="Assets.xcassets\chanceflurries.imageset\" />
-    <Folder Include="Assets.xcassets\i_globe.imageset\" />
+    <Folder Include="Assets.xcassets\Denver.dataset\" />
     <Folder Include="Assets.xcassets\i_add.imageset\" />
-    <Folder Include="Assets.xcassets\i_close.imageset\" />
-    <Folder Include="Assets.xcassets\i_list.imageset\" />
-    <Folder Include="Assets.xcassets\i_drop.imageset\" />
-    <Folder Include="Assets.xcassets\i_cog.imageset\" />
     <Folder Include="Assets.xcassets\i_add_sm.imageset\" />
+    <Folder Include="Assets.xcassets\i_close.imageset\" />
+    <Folder Include="Assets.xcassets\i_cog.imageset\" />
+    <Folder Include="Assets.xcassets\i_current.imageset\" />
+    <Folder Include="Assets.xcassets\i_drop.imageset\" />
+    <Folder Include="Assets.xcassets\i_globe.imageset\" />
+    <Folder Include="Assets.xcassets\i_list.imageset\" />
+    <Folder Include="Assets.xcassets\i_radar.imageset\" />
+    <Folder Include="Assets.xcassets\Las_Vegas.dataset\" />
     <Folder Include="Assets.xcassets\logo_wunderground_rev.imageset\" />
     <Folder Include="Assets.xcassets\logo_wunderground_white.imageset\" />
-    <Folder Include="Assets.xcassets\bg_launch.imageset\" />
-    <Folder Include="ViewControllers\RadarOverlay\" />
-    <Folder Include="Assets.xcassets\i_radar.imageset\" />
-    <Folder Include="Assets.xcassets\i_current.imageset\" />
+    <Folder Include="Assets.xcassets\Miami.dataset\" />
+    <Folder Include="Assets.xcassets\New_Orleans.dataset\" />
+    <Folder Include="Assets.xcassets\San_Francisco.dataset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
